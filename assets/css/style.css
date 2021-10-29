@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
@@ -108,14 +109,53 @@ li {
   width: 86%; 
   margin: 0 auto;
 }
+
 /*=================================
   Header styling starts here
 =================================*/
+.container {
+  font-family: 'Poppins', sans-serif;
+}
+header {
+  height: 30vh;
+  color: white;
+  background: rgb(48,24,55);
+  background: linear-gradient(90deg, rgba(48,24,55,1) 9%, rgba(116,63,133,1) 84%);
+  /* display: grid;
+  grid-template-columns: 45% 10% 45%;
+  padding: 0 5rem 5rem 5rem; */
+  padding-top: 10rem;
+}
 
-
-
-
-
+.hero {
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+.hero-header {
+  font-size: 20px;
+  font-weight: bold;
+}
+.line {
+  width: 0%;
+  height: 100%;
+  border-right: 1px solid grey;
+}
+.hero-content {
+  font-size: 10px;
+}
+.hero-content p {
+  margin-bottom: 2rem;
+}
+.hero-content a {
+  padding: 8px 20px;
+  color: white;
+  background-color: #40CA62;
+  text-transform: uppercase;
+  border-radius: 20px;
+}
 
 /*=================================
   Header styling ends here
@@ -125,12 +165,171 @@ li {
   main styling starts here
 =================================*/
 
+main {
+  width: 100%;
+  background-color: #ECECEC;
+}
 
+.learn {
+  width:  100%;
+  border-bottom: 1px solid gray;
+  background-color: white;
+}
+.learn > div {
+  width: 75%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 50px 1fr;
+  justify-items: center;
+}
+.learn .learn-left {
+  padding: 2rem;
+  justify-self: end;
+  align-self: center;
+}
+.learn h2, article .content h2, .contact .contact-form h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #575D59;
+  margin-bottom: 1rem;
+}
+.learn-left p, article .content p, .contact .contact-form p {
+  font-size: 12px;
+  margin-bottom: 2rem;
+}
+.learn-right {
+  font-size: 12px;
+}
+.learn .line {
+  height: 70%;
+  margin: auto;
+}
+.learn-right ul {
+  height: 100%;
+  padding: 2rem;
+}
+.learn-right ul li {
+  display: flex;
+  align-items: center;
+  margin: 10px auto;
+}
+.learn-right ul li i {
+  margin-right: 1rem;
+  color: greenyellow;
+}
+.learn-more a, article .content a, section div a {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 40px;
+  border: 1px solid grey;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #575D59;
+  transition: .2s ease-in-out;
+}
+.learn-more a:hover, article .content a:hover, section div a:hover {
+  transform: scale(1.1);
+}
+.articles {
+  background-color: #ECECEC;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem auto;
+}
 
+.articles article {
+  width: 70%;
+  display: flex;
+  background-color: white;
+  margin-bottom: 3rem;
+}
+article .content {
+  display: grid;
+  align-self: center;
+  margin: 2rem;
+}
+article .article-image {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+article .article-image img {
+  width: 600px;
+  height: auto;
+  background-size: cover;
+}
+article .content a {
+  width: 50px
+}
 
-
-
-
+.contact {
+  border-bottom: 1px solid #666;
+  background-color: white;
+  padding: 3rem;
+}
+.contact > div {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 100px 1fr;
+  justify-items: end;
+  padding: 2rem;
+}
+.contact .contact-form {
+  justify-self: end;
+  align-self: center;
+}
+.contact form ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact form ul li {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+.contact form ul li input {
+  border: 1px solid #666;
+  height: 25px;
+  padding: 5px;
+  width: 45%;
+}
+.contact form textarea {
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: 1px solid #666;
+  padding: 5px;
+}
+.contact .line {
+  height: 90%;
+}
+.social-links {
+  display: flex;
+  margin-left: 3rem;
+}
+.contact .social-links ul {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.social-links ul li {
+  margin-bottom: 1rem;
+}
+.social-links ul li i {
+  color: #40CA62;
+  font-weight: bold;
+  font-size: 16px;
+}
 
 /*=================================
   main styling ends here
@@ -139,7 +338,13 @@ li {
 /*=================================
   footer styling starts here
 =================================*/ 
-
+footer {
+  background-color: #ECECEC;
+  color: #666;
+  text-align: center;
+  padding: 2.5rem;
+  font-size: 12px;
+}
 
 
 
@@ -153,7 +358,83 @@ li {
 /*media query starts*/
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
+  .contact {
+    padding: 2rem 0rem
+  }
+  .contact > div {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    grid-template-columns: 1fr 50px 1fr;
+  }
+}
 
+@media only screen and (max-width: 768px) {
+  .learn-right ul {
+    padding: 2rem 0;
+  }
+  .hero {
+    width: 90%;
+  }
+  .learn > div {
+    width: 100%;
+  }
+  .articles article {
+    width: 90%;
+  }
+  .contact > div {
+    width: 70%;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 0rem;
+  }
+  .contact .line {
+    display: none;
+  }
+  .contact .social-links {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-left: 0;
+  }
+}
 
+@media only screen and (max-width: 560px) {
+  .hero {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+  .learn > div {
+    width: 75%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: flex-start;
+    align-items: center;
+  }
+  .articles article {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-bottom: 3rem;
+  }
+  .learn .learn-left {
+    padding: 2rem 0 0 0;
+  }
+  .line {
+    display: none;
+  }
+}
 
-}  
+@media only screen and (max-width: 480px) {
+  header {
+    padding-top: 5rem auto;
+  }
+  header a {
+    margin-bottom: 5rem;
+  }
+  .hero h1 {
+    margin-bottom: 1rem;
+  }
+}
+  
